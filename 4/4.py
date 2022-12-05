@@ -20,6 +20,6 @@ def weak_range_contains(a, b):
     return (a1 <= b2 and b1 >= a2) or (b1 <= a2 and a1 >= b2)
 
 
-print(sum(map(lambda x: 1 if range_contains(x[0], x[1]) else 0, assignments)))
-print(sum(map(lambda x: 1 if weak_range_contains(
-    x[0], x[1]) else 0, assignments)))
+print(sum([1 if range_contains(x[0], x[1]) else 0 for x in assignments]))
+print(sum([1 if weak_range_contains(
+    x[0], x[1]) else 0 for x in assignments]))
